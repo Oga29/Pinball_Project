@@ -2,6 +2,19 @@
 A pinball project made in groups for Physics II CITM 2022 
 
 
+
+##WIN AND LOSE
+
+The win condition is to hit a rectangle on the left center of the map 
+
+
+![This is an image](https://i.imgur.com/63BLyD6.png)
+
+
+The lose condition is to waste all the balls(3 lifes)
+
+
+
 ## Controls
 
 Key down - spring
@@ -10,13 +23,16 @@ Key Right - right flipper
 
 Key Left - left flipper
 
+F1 - debug
+
+ESC - close the game
 
 
 ## Team members
-Marta Llurba - https://github.com/Marta-24
+Marta Llurba -  [MARTA](https://github.com/Marta-24 ).
 
-Sergio Garriguez - https://github.com/SergioGarriguez
+Textures, coded/drew entities(circle, rect, chains etc)
 
-Adrià Belmonte - https://github.com/Croaco
+Ogylandy Yespagambetov - [Oga](https://github.com/Oga29)
 
-Ogylandy Yespagambetov - https://github.com/Oga29
+Coding headers, Scene, and etc 
