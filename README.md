@@ -52,3 +52,12 @@ https://www.classicgame.com/game/Pinball+Basketball
 
 
 https://www.classicgame.com/game/Tom+%26+Jerry+Mousetrap+Pinball
+
+
+## Problems and Bugs
+
+We found a problem with adding all controls to separate cpp files(like Flipper.cpp, ball.cpp and etc) so we just decided to simple put everything in SceneIntro.cpp
+in understandable order.
+
+Another issue was making "Inner walls" of the map. Initially we decided to make a single inner wall chain with some gateways for ball to pass. It did't work out great so in the end we separated them. 
+
