@@ -54,7 +54,7 @@ public:
 	SDL_Texture* fliper_right;
 	SDL_Texture* spring_;
 	SDL_Texture* win_lose;
-
+	SDL_Rect r_scorePanel;
 	SDL_Rect win_screen;
 	SDL_Rect lose_screen;
 

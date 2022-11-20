@@ -9,6 +9,7 @@
 #include "ModuleFont.h"
 #include "Box2D/Box2D/Box2D.h"
 
+
 ModuleSceneIntro::ModuleSceneIntro(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
 	circle = NULL;
@@ -47,15 +48,15 @@ bool ModuleSceneIntro::Start()
 
 	fliper_left = App->textures->Load("pinball/flipper-left.png");
 	fliper_right = App->textures->Load("pinball/flipper-right.png");
-	Map = App->textures->Load("pinball/Map.png");
+	Map = App->textures->Load("pinball/map_redraw.png");
 	// SoundFX
 	bonus_fx = App->audio->LoadFx("pinball/bonus.wav");
-	ball_lost_fx = App->audio->LoadFx("pinball/lol-you-died.wav");
+	ball_lost_fx = App->audio->LoadFx("pinball/oh no.wav");
 	win_fx = App->audio->LoadFx("pinball/Final-Fantasy-Victory.wav");
 	hitmarker_fx = App->audio->LoadFx("pinball/hit.wav");
-	sonic_fx = App->audio->LoadFx("pinball/sonic.wav");
-	wasted_fx = App->audio->LoadFx("pinball/wasted.wav");
-	sadforloosing_fx = App->audio->LoadFx("pinball/You are dead.wav.wav");
+	
+	wasted_fx = App->audio->LoadFx("pinball/you are dead.wav");
+	sadforloosing_fx = App->audio->LoadFx("pinball/lol-you-died.wav");
 	surprisem_fx = App->audio->LoadFx("pinball/hello-there.wav");
 
 	/*circle = App->textures->Load("pinball/wheel.png");
@@ -685,14 +686,9 @@ update_status ModuleSceneIntro::Update()
 	if (!game_end)
 	{
 
-		//if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN)
-		//{
-		//	ray_on = !ray_on;
-		//	ray.x = App->input->GetMouseX();
-		//	ray.y = App->input->GetMouseY();
-		//}
+		
 
-		if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN || spawn_ball) // Spawn a ball where it should be ath the start
+		if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN || spawn_ball) // Spawn a ball 
 		{
 			if (spawn_ball == true)
 			{
@@ -704,6 +700,7 @@ update_status ModuleSceneIntro::Update()
 			}
 
 		}
+		
 
 		if (App->input->GetKey(SDL_SCANCODE_2) == KEY_DOWN) // Spawn a ball on the mouse
 		{
@@ -745,15 +742,7 @@ update_status ModuleSceneIntro::Update()
 				spring_calc = true;
 			}
 
-			/*if (METERS_TO_PIXELS(pos.y) > 989)
-			{
-				spring->body->SetLinearVelocity(b2Vec2(0, -25));
-			}
-			else
-			{
-				spring->body->SetLinearVelocity(b2Vec2(0, 0));
-				spring_calc
-			}*/
+			
 		}
 
 		LOG("%i", 972 - METERS_TO_PIXELS(pos.y));
@@ -792,6 +781,8 @@ update_status ModuleSceneIntro::Update()
 				fliperLeft->body->SetAngularVelocity(0.0f);
 			}
 		}
+
+		
 
 		// Right fliper 
 
@@ -947,19 +938,7 @@ void ModuleSceneIntro::OnCollision(PhysBody* bodyA, PhysBody* bodyB)
 {
 	
 
-	/*
-	if(bodyA)
-	{
-		bodyA->GetPosition(x, y);	
-		App->renderer->DrawCircle(x, y, 50, 100, 100, 100);
-	}
-
-	if(bodyB)
-	{
-		bodyB->GetPosition(x, y);
-		App->renderer->DrawCircle(x, y, 50, 100, 100, 100);
-	}*/
-
+	
 	if (bodyB == nullptr)
 	{
 
@@ -998,12 +977,7 @@ void ModuleSceneIntro::OnCollision(PhysBody* bodyA, PhysBody* bodyB)
 			}
 
 
-			//bodyA->body->SetActive(false);
-
-			//TODO delete the ball still does not work, fatal error
-			//delete(bodyA);
-
-			//delete bodyA;
+			
 			spawn_ball = true;
 
 		}
@@ -1026,7 +1000,7 @@ void ModuleSceneIntro::OnCollision(PhysBody* bodyA, PhysBody* bodyB)
 			direction = { direction.x * multi,direction.y * multi };
 			bodyA->body->SetLinearVelocity(direction);
 			App->audio->PlayFx(surprisem_fx);
-			//ApplyForce(direction, bodyA->body->GetWorldCenter(), true);
+			
 
 			//TODO sum points
 			score++;
@@ -1042,10 +1016,7 @@ void ModuleSceneIntro::OnCollision(PhysBody* bodyA, PhysBody* bodyB)
 			App->audio->PlayFx(hitmarker_fx);
 
 		}
-		else if ((bodyA->id == 0) && (bodyB->id == 6))
-		{
-			App->audio->PlayFx(sonic_fx);
-		}
+		
 	}
 
 }
