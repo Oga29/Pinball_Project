@@ -1,4 +1,8 @@
 # Pinball_Project
+
+https://github.com/Oga29/Pinball_Project
+
+
 A pinball project made in groups for Physics II CITM 2022 
 
 ![Map](https://i.imgur.com/tLwy499.png)
