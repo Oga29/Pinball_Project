@@ -3,7 +3,7 @@ A pinball project made in groups for Physics II CITM 2022
 
 
 
-##WIN AND LOSE
+## WIN AND LOSE
 
 The win condition is to hit a rectangle on the left center of the map 
 
