@@ -1,0 +1,57 @@
+﻿  ModuleSceneIntro.cpp
+C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\ModuleSceneIntro.cpp(739,77): warning C4244: 'argument': conversion from 'int' to 'float32', possible loss of data
+C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\ModuleSceneIntro.cpp(859,49): warning C4244: 'argument': conversion from 'TYPE' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=int
+          ]
+          and
+          [
+              TYPE=float
+          ]
+C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\ModuleSceneIntro.cpp(859,32): warning C4244: 'argument': conversion from 'TYPE' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=int
+          ]
+          and
+          [
+              TYPE=float
+          ]
+C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\ModuleSceneIntro.cpp(861,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\ModuleSceneIntro.cpp(863,71): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+          with
+          [
+              TYPE=float
+          ]
+C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\ModuleSceneIntro.cpp(863,48): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+          with
+          [
+              TYPE=float
+          ]
+C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\ModuleSceneIntro.cpp(866,139): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+          with
+          [
+              TYPE=float
+          ]
+C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\ModuleSceneIntro.cpp(866,97): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+          with
+          [
+              TYPE=float
+          ]
+C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\ModuleSceneIntro.cpp(866,58): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+          with
+          [
+              TYPE=float
+          ]
+C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\ModuleSceneIntro.cpp(866,35): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+          with
+          [
+              TYPE=float
+          ]
+  Generating code
+  0 of 213 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  SDL Game.vcxproj -> C:\Users\ASUS\Desktop\Dude\uni\phys2\Pinbal\Release\2D Physics - class 4.exe
