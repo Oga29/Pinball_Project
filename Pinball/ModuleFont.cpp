@@ -77,36 +77,3 @@ void ModuleFonts::UnLoad(int font_id)
 
 }
 
-void ModuleFonts::DrawText(int x, int y, int text) const
-{
-	SDL_Rect spriteRect;
-	uint len = 4;
-
-	spriteRect.w = fonts.char_w;
-	spriteRect.h = fonts.char_h;
-
-	for (uint i = 0; i < len; ++i)
-	{
-		// L9: DONE 2: Find the character in the table and its position in the texture, then Blit
-		uint charIndex = 0;
-
-		if (i == 1)
-		{
-			charIndex = App->scene_intro->to_sum;
-		}
-		else if (i == 2)
-		{
-			charIndex = text;
-		}
-		else charIndex = 0;
-		// Find the location of the current character in the lookup table
-
-		spriteRect.x = spriteRect.w * (charIndex % fonts.columns);
-		spriteRect.y = spriteRect.h * (0 / fonts.columns);
-
-		App->renderer->Blit(fonts.texture, x, y, &spriteRect);
-
-		// Advance the position where we blit the next character
-		x += spriteRect.w;
-	}
-}

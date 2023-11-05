@@ -62,7 +62,6 @@ public:
 	uint ball_lost_fx;
 	uint win_fx;
 	uint hitmarker_fx;
-	uint sonic_fx;
 	uint wasted_fx;
 	uint sadforloosing_fx;
 	uint surprisem_fx;
